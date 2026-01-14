@@ -61,7 +61,20 @@ npx agent-browser-mcp
 ### Prerequisites
 
 - Node.js 18 or newer
-- [agent-browser](https://github.com/vercel-labs/agent-browser) CLI installed
+- [agent-browser](https://github.com/vercel-labs/agent-browser) CLI installed:
+
+```bash
+# Install agent-browser globally
+npm install -g agent-browser
+
+# Download Chromium browser
+agent-browser install
+
+# On Linux, install system dependencies if needed:
+# agent-browser install --with-deps
+```
+
+> **⚠️ Windows Note:** agent-browser currently has [known issues on Windows](https://github.com/vercel-labs/agent-browser/issues/56) with native shells (PowerShell/CMD). For Windows users, we recommend using [WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/en-us/windows/wsl/install) until the upstream issue is resolved.
 
 ## Configuration
 
