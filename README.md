@@ -351,7 +351,7 @@ await client.callTool({
 
 ```bash
 # Clone the repository
-git clone https://github.com/vercel-labs/agent-browser-mcp.git
+git clone https://github.com/minhlucvan/agent-browser-mcp.git
 cd agent-browser-mcp
 
 # Install dependencies
