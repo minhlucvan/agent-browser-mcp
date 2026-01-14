@@ -46,16 +46,6 @@ Agent Browser was **built from the ground up for AI agents**, not adapted from h
 | **Preserves Login State** | Via storage | Via storage | Yes (your browser) | Yes (your browser) |
 | **Multi-browser** | Chromium | Chrome, Firefox, WebKit | Chrome only | Chrome only |
 
-### When to Use Each
-
-- **Agent Browser MCP** - Purpose-built for AI agents. Best for automated workflows, CI/CD pipelines, and scenarios where token efficiency and semantic understanding matter.
-
-- **Playwright MCP** - Mature ecosystem with cross-browser support. Best when you need Firefox/WebKit or complex test scenarios.
-
-- **MCP Chrome** - Uses your existing browser with login states. Best for personal productivity tasks requiring your authenticated sessions.
-
-- **Playwriter** - Single `execute` tool with full Playwright API. Best when you want minimal tool definitions and maximum flexibility.
-
 ## Installation
 
 ```bash
