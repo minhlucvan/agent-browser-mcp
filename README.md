@@ -1,6 +1,22 @@
 # Agent Browser MCP
 
+[![npm version](https://img.shields.io/npm/v/agent-browser-mcp.svg)](https://www.npmjs.com/package/agent-browser-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
+
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that provides browser automation capabilities through [Vercel's agent-browser](https://github.com/vercel-labs/agent-browser). This enables LLMs to interact with web pages using a fast Rust CLI with Node.js fallback.
+
+## Quick Start
+
+```bash
+# 1. Install agent-browser CLI
+npm install -g agent-browser && agent-browser install
+
+# 2. Add to Claude Desktop (or your MCP client)
+npx agent-browser-mcp
+```
+
+Then use tools like `browser_navigate`, `browser_click`, `browser_snapshot` to control the browser from your AI agent.
 
 ## Features
 
@@ -11,6 +27,16 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that p
 - **Cookie Management** - Full control over browser cookies and storage
 - **JavaScript Execution** - Run arbitrary scripts in the browser context
 - **Network Inspection** - Monitor console messages and network requests
+
+## Use Cases
+
+- **Web Scraping for AI** - Extract structured data from websites for RAG, research, or analysis
+- **Automated Testing** - AI-powered end-to-end testing with natural language assertions
+- **Form Automation** - Fill forms, submit data, handle multi-step workflows
+- **Screenshot Analysis** - Capture pages for visual AI analysis or documentation
+- **Session Automation** - Login once, persist cookies, automate authenticated workflows
+- **Data Entry** - Bulk data input across web applications
+- **Monitoring** - Track changes on web pages, detect updates, gather metrics
 
 ## Why Agent Browser?
 
@@ -372,6 +398,13 @@ npm run dev
 # Start server
 npm start
 ```
+
+## Related Projects
+
+- [agent-browser](https://github.com/vercel-labs/agent-browser) - The underlying browser automation CLI by Vercel
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) - Microsoft's Playwright-based MCP server
+- [MCP Chrome](https://github.com/nicobailey3/mcp-chrome) - Chrome extension-based MCP server
+- [Model Context Protocol](https://modelcontextprotocol.io/) - The MCP specification
 
 ## License
 

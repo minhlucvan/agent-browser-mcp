@@ -24,10 +24,30 @@
     "agent-browser",
     "browser-automation",
     "ai-agent",
-    "headless-browser"
+    "headless-browser",
+    "claude",
+    "anthropic",
+    "llm",
+    "web-scraping",
+    "playwright",
+    "chromium",
+    "vercel",
+    "accessibility",
+    "semantic-locators",
+    "web-automation",
+    "ai-browser",
+    "mcp-server"
   ],
-  "author": "",
+  "author": "minhlucvan",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhlucvan/agent-browser-mcp.git"
+  },
+  "homepage": "https://github.com/minhlucvan/agent-browser-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/minhlucvan/agent-browser-mcp/issues"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
     "@modelcontextprotocol/sdk": "^1.12.0",
