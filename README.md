@@ -57,21 +57,6 @@ Agent Browser was **built from the ground up for AI agents**, not adapted from h
 - **Lightweight snapshots** - Accessibility tree instead of full DOM
 - **Streaming output** - Real-time feedback without buffering
 
-## Comparison with Other Browser MCP Servers
-
-| Feature | Agent Browser MCP | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | [MCP Chrome](https://github.com/hangwin/mcp-chrome) | [Playwriter](https://github.com/remorses/playwriter) |
-|---------|:-----------------:|:-------------------------------------------------------------:|:---------------------------------------------------:|:----------------------------------------------------:|
-| **Agent-Native Design** | Yes | No | No | No |
-| **Semantic Locators** | Native | Via accessibility | CSS only | Via Playwright |
-| **Token Efficient Output** | Yes | Moderate | No | Yes |
-| **Performance** | Rust CLI | Node.js | Extension | Extension |
-| **Headless / CI-CD** | Yes | Yes | No | No |
-| **No Extension Required** | Yes | Yes | No | No |
-| **Session Isolation** | Yes | Yes | No | Per-tab |
-| **Accessibility Snapshots** | Yes | Yes | No | Labels only |
-| **Preserves Login State** | Via storage | Via storage | Yes (your browser) | Yes (your browser) |
-| **Multi-browser** | Chromium | Chrome, Firefox, WebKit | Chrome only | Chrome only |
-
 ## Installation
 
 ```bash
