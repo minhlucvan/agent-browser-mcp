@@ -12,34 +12,49 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that p
 - **JavaScript Execution** - Run arbitrary scripts in the browser context
 - **Network Inspection** - Monitor console messages and network requests
 
+## Why Agent Browser?
+
+Agent Browser was **built from the ground up for AI agents**, not adapted from human-centric automation tools. This fundamental difference delivers significant advantages:
+
+### Agent-Native Design
+
+| Capability | Agent Browser | Traditional Tools |
+|------------|---------------|-------------------|
+| **Semantic Element Targeting** | Native accessibility-based locators | CSS selectors / XPath |
+| **Token Efficiency** | Structured data, minimal output | Verbose HTML/screenshots |
+| **Response Format** | AI-optimized, parseable | Human-readable |
+| **Error Messages** | Actionable, context-aware | Generic stack traces |
+
+### Performance
+
+- **Rust-powered CLI** - Fast execution with minimal overhead
+- **Lightweight snapshots** - Accessibility tree instead of full DOM
+- **Streaming output** - Real-time feedback without buffering
+
 ## Comparison with Other Browser MCP Servers
 
 | Feature | Agent Browser MCP | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | [MCP Chrome](https://github.com/hangwin/mcp-chrome) | [Playwriter](https://github.com/remorses/playwriter) |
-|---------|-------------------|---------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------|
-| **Architecture** | CLI (Rust + Node.js) | Node.js + Playwright | Chrome Extension | Chrome Extension |
-| **Browser Instance** | New headless browser | New headless browser | Existing Chrome | Existing Chrome |
-| **Preserves Login State** | Via cookies/storage | Via storage state | Yes (uses your browser) | Yes (uses your browser) |
-| **Session Isolation** | Yes | Yes | No | Per-tab control |
-| **Headless Support** | Yes | Yes | No | No |
-| **CI/CD Friendly** | Yes | Yes | No | No |
+|---------|:-----------------:|:-------------------------------------------------------------:|:---------------------------------------------------:|:----------------------------------------------------:|
+| **Agent-Native Design** | Yes | No | No | No |
+| **Semantic Locators** | Native | Via accessibility | CSS only | Via Playwright |
+| **Token Efficient Output** | Yes | Moderate | No | Yes |
+| **Performance** | Rust CLI | Node.js | Extension | Extension |
+| **Headless / CI-CD** | Yes | Yes | No | No |
 | **No Extension Required** | Yes | Yes | No | No |
-| **Multi-browser Support** | Chromium | Chrome, Firefox, WebKit, Edge | Chrome only | Chrome only |
-| **Accessibility Snapshots** | Yes | Yes | No | Via labels |
-| **PDF Generation** | Yes | Yes | No | Yes |
-| **Network Interception** | Yes | Yes | Yes | Yes |
-| **Semantic Search** | No | No | Yes (vector DB) | No |
-| **Browser History Access** | No | No | Yes | No |
-| **Bookmarks Access** | No | No | Yes | No |
+| **Session Isolation** | Yes | Yes | No | Per-tab |
+| **Accessibility Snapshots** | Yes | Yes | No | Labels only |
+| **Preserves Login State** | Via storage | Via storage | Yes (your browser) | Yes (your browser) |
+| **Multi-browser** | Chromium | Chrome, Firefox, WebKit | Chrome only | Chrome only |
 
 ### When to Use Each
 
-- **Agent Browser MCP**: Best for CI/CD pipelines, automated testing, and scenarios requiring isolated headless browser sessions. Fast Rust-based CLI with comprehensive automation tools.
+- **Agent Browser MCP** - Purpose-built for AI agents. Best for automated workflows, CI/CD pipelines, and scenarios where token efficiency and semantic understanding matter.
 
-- **Playwright MCP**: Best for cross-browser testing and when you need the full power of Playwright's mature ecosystem. Excellent for complex automation scenarios.
+- **Playwright MCP** - Mature ecosystem with cross-browser support. Best when you need Firefox/WebKit or complex test scenarios.
 
-- **MCP Chrome**: Best when you need to leverage existing browser sessions, login states, and want to search across open tabs. Great for personal productivity and research tasks.
+- **MCP Chrome** - Uses your existing browser with login states. Best for personal productivity tasks requiring your authenticated sessions.
 
-- **Playwriter**: Best for developers who want minimal context usage and full Playwright API access through a single tool. Good for collaborative human-AI browser sessions.
+- **Playwriter** - Single `execute` tool with full Playwright API. Best when you want minimal tool definitions and maximum flexibility.
 
 ## Installation
 
