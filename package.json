@@ -1,6 +1,6 @@
 {
   "name": "agent-browser-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server integrating with Vercel's agent-browser for AI-driven browser automation",
   "type": "module",
   "main": "dist/index.js",
