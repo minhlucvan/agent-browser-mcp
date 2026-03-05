@@ -7,6 +7,9 @@ interface ExecOptions {
   [key: string]: unknown;
 }
 
+// Commands that expect a positional URL argument rather than a --url flag
+const POSITIONAL_URL_COMMANDS = ["navigate", "open"];
+
 /**
  * Execute an agent-browser command and return the result
  */
@@ -25,6 +28,14 @@ export async function execBrowser(
   // Add options as command arguments
   for (const [key, value] of Object.entries(options)) {
     if (value === undefined || value === null) continue;
+
+    // Some commands (e.g. `navigate`) expect a positional URL argument,
+    // not a --url flag. Passing --url causes agent-browser to treat the
+    // flag name itself as the host, resulting in ERR_NAME_NOT_RESOLVED.
+    if (key === "url" && POSITIONAL_URL_COMMANDS.includes(command)) {
+      args.push(String(value));
+      continue;
+    }
 
     const flag = `--${key.replace(/([A-Z])/g, "-$1").toLowerCase()}`;
 
